@@ -194,50 +194,155 @@
                 transform: translateY(0);
             }
         }
-        
-        
 
+        #fixed-header {
+            position:fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .topnav {
+            background-color: #4180bb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        .topnav a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 20px 15px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .modalities-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .modality {
+            width: 300px;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            background-color: #ffffff; /* Set the background color for the modality button */
+        }
+
+        .modality:hover {
+            transform: scale(1.05);
+        }
+
+        .modality a {
+            text-decoration: none;
+            color: inherit;
+            display: block; /* Make the entire modality button clickable */
+        }
+
+        .modality img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        #fixed-header {
+            position:fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
     </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var images = document.querySelectorAll('.animate-from-left');
+            var dropdown = document.querySelector('.dropdown');
 
-            var options = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5
-            };
-
-            var observer = new IntersectionObserver(function (entries, observer) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-
-            images.forEach(function (image) {
-                observer.observe(image);
+            dropdown.addEventListener('click', function (event) {
+                event.stopPropagation();
+                dropdown.classList.toggle('active');
             });
-        });
 
-        function abrirDoisLinks() {
-            window.open('https://www.facebook.com/pages/category/Restaurant/Forno-Eventos-102864721135452/', '_blank');
-            window.open('https://www.facebook.com/people/Casa-De-Peixe/100090143823379/', '_blank');
-        }
+            document.addEventListener('click', function (event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            var currentPage = window.location.href;
+            var homePage = "PaginaInicial.html";
+
+            if (currentPage.includes(homePage)) {
+                dropdown.classList.remove('active');
+            }
+        });
     </script>
 
 </head>
 
 <body>
-
-    
-
     <div class = "imagem-background"></div>
-    
-    <div class="topnav">
+    <br>
+    <br>
+    <div class="topnav" id = "fixed-header">
         <a href="PaginaInicial.html">O clube</a>
         <a href="Noticias.html">Noticias</a>
         <a href="Modalidades.html">Outras Modalidades</a>
@@ -249,6 +354,10 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
         <div class="logo-title">
             <img src="Clube_Desportivo_Pinhalnovense.ico" alt="Clube Desportivo Pinhalnovense">
         </div>
@@ -317,3 +426,4 @@
     </div>  
 </body>
 </html>
+

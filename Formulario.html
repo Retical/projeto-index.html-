@@ -148,6 +148,16 @@
             width: 100%;
             z-index: -1; /* Coloca a imagem de fundo atrás de todo o conteúdo */
         }
+
+        #fixed-header {
+            position:fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+
     </style>
 
     <script>
@@ -171,7 +181,9 @@
 
 <body>
     <div class = "imagem-background"></div>
-    <div class="topnav">
+    <br>
+    <br>
+    <div class="topnav" id = "fixed-header">
         <div class="dropdown">
             <a href="#">O clube</a>
             <div class="dropdown-content">

@@ -105,6 +105,16 @@
         h2 {
             color: blue;
         }
+
+        #fixed-header {
+            position:fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+
     </style>
 
     <script>
@@ -134,7 +144,9 @@
 </head>
 
 <body>
-    <div class="topnav">
+    <br>
+    <br>
+    <div class="topnav" id = "fixed-header">
         <a href="PaginaInicial.html">O clube</a>
         <a href="Noticias.html">Noticias</a>
         <a href="Modalidades.html">Outras Modalidades</a>
