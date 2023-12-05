@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagina Inicial | CDP Basquetebol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="PN Icon" type="image/jpg" href="Clube_Desportivo_Pinhalnovense.ico"/>
+    <style>
+        /* Your existing CSS styles remain unchanged */
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            background-color: #4180bb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+            .imagem-background {
+                background-image: url('https://static.wixstatic.com/media/e9ac5c_1529723487c04921922139b4c8f80633.jpg/v1/fill/w_1583,h_751,al_c,q_85,usm_1.20_1.00_0.01,enc_auto/e9ac5c_1529723487c04921922139b4c8f80633.jpg');
+                filter: blur(8px);
+                -webkit-filter: blur(8px);
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover; /* Alterado de 100% para cover */
+                position: fixed;
+                width: 100%;
+                z-index: -1; /* Coloca a imagem de fundo atrás de todo o conteúdo */
+            }   
+
+        .topnav a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 20px 15px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 60px; /* Adjust the top position based on the height of the navbar */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%);
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 14px 16px; /* Same size as the main menu */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .image-frame p {
+            margin-top: 10px;
+        }
+
+        p {
+            text-align:center;
+            
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto; /* Ajustado a margem para centralizar a frame */
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #4180bb; /* Adicionada a borda para indicar a frame */
+            border-radius: 10px;
+        }
+
+        .image-frame {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .image-frame img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            background-color: #4180bb;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 8px;
+            margin: 50px 15px; /* Adjusted margin to move the button further down */
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .back-button:hover {
+            background-color: #306193;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #4180bb;
+            border-radius: 10px;
+        }
+
+
+        h1 {
+            
+            text-align:center;
+        }
+
+        .info-section {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .info-section p {
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        h4 {
+            text-align:center;
+        }
+
+        h5 {
+            text-align:center;
+        }
+
+        h3 {
+            text-align:center;
+        }
+        
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdown = document.querySelector('.dropdown');
+
+            dropdown.addEventListener('click', function (event) {
+                event.stopPropagation(); // Impede que o clique se propague para o documento
+                dropdown.classList.toggle('active');
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            var currentPage = window.location.href;
+            var homePage = "PaginaInicial.html";
+
+            if (currentPage.includes(homePage)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class = "imagem-background"></div>
+    <div class="topnav">
+        <a href="PaginaInicial.html">O clube</a>
+        <a href="Noticias.html">Noticias</a>
+        <a href="Modalidades.html">Outras Modalidades</a>
+        <div class="dropdown">
+            <a href="#">Contactos</a>
+            <div class="dropdown-content">
+                <a href="Formulario.html">Entrar em Contacto</a>
+                <a href="Contactos.html">Outras Informações</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <a class="back-button" href="javascript:history.back()"> Voltar</a>
+    <div class="container">
+        <h1>FUTEBOL ESCOLAS / FORMAÇÃO / COMPETIÇÃO </h1>
+        <div class="frame">
+            <h2 align = center>Época 2023/2024</h2>
+        </div>
+    </div>
+    <div class = "container">
+        <div class = "frame">
+            <h1>
+                 TREINOS ÉPOCA 2023/2024
+            </h1>
+            <br>
+            <h2 align = center  > CDP FUTEBOL </h2>
+            <h3> FORMAÇÃO/COMPETIÇÃO/JUNIOR/SÉNIOR </h3>
+            <h4> Hórarios dos treinos</h4>
+            <div class="info-section">
+                <center>
+                    <img src = "AgendaFutebol.png" alt = "AgendaFutebol">
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class = "container">
+        <div class = "frame">
+            <h1>
+                 INICIO DOS TREINOS
+            </h1>
+            
+            <h2 align = center > 
+                CDP Futebol
+            </h2>
+            <div class="info-section">
+                <center>
+                    <img src = "AgendaFutebol2.png" alt = "AgendaFutebol">
+                </center>
+            <br>
+            <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="frame">
+            <video controls style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                <source src="https://video.wixstatic.com/video/e9ac5c_e6a34472b7744ed8b4cd4a74f1e7bf32/1080p/mp4/file.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </div>
+    <br>
+    <br>
+</body>
+</html>     

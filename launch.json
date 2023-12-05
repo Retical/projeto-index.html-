@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open Página Inicial.html",
+            "file": "d:\\Escola\\11º Ano\\Cris 11ºN RC\\Modulo 4\\HTML\\Projeto Final M4\\Página Inicial.html"
+        }
+    ]
+}

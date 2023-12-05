@@ -1,0 +1,196 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Pagina Inicial | CDP Basquetebol</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="PN Icon" type="image/jpg" href="Clube_Desportivo_Pinhalnovense.ico"/>
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .topnav {
+                    
+                background-color: #4180bb;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+            }
+
+            .topnav a {
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                margin: 20px 15px;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                top: 60px; /* Adjust the top position based on the height of the navbar */
+                left: 50%; /* Center horizontally */
+                transform: translateX(-50%);
+            }
+            
+            .dropdown-content a {
+                color: black;
+                padding: 14px 16px; /* Same size as the main menu */
+                text-decoration: none;
+                display: block;
+                text-align: center;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .news-section {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        .news-image {
+            max-width: 100%; 
+            height: auto;
+            display:block;
+            margin:0 auto;  
+        }
+
+        h2 {
+            color:#4180bb;
+            text-align:center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto; /* Ajustado a margem para centralizar a frame */
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #4180bb; /* Adicionada a borda para indicar a frame */
+            border-radius: 10px;
+        }
+
+        .image-frame {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .image-frame img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var dropdown = document.querySelector('.dropdown');
+
+                dropdown.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Impede que o clique se propague para o documento
+                    dropdown.classList.toggle('active');
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!dropdown.contains(event.target)) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+
+                var currentPage = window.location.href;
+                var homePage = "PaginaInicial.html";
+
+                if (currentPage.includes(homePage)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="PaginaInicial.html">O clube</a>
+            <a href="Noticias.html">Noticias</a>
+            <a href="Modalidades.html">Outras Modalidades</a>
+            <div class="dropdown">
+                <a href="#">Contactos</a>
+                <div class="dropdown-content">
+                    <a href="Formulario.html">Entrar em Contacto</a>
+                    <a href="Contactos.html">Outras Informações</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class = "image-frame">
+                <h2>
+                    BASQUETEBOL PINHALNOVENSE INFANTIS VITÓRIA NO TORNEIO DE ALENQUER
+                </h2>
+                <img class="news-image" src="Noticia 1 .png" alt="News 1 Image">
+                <p>
+                    Sábado, dia 18,  uma vasta comitiva de atletas, e treinadores, deslocou-se a Alenquer  para disputa de vários troféus do prestigiado Torneio Local.
+                    Pela manhã  começaram os Sub 12 mostos (na foto)  que cilindram os seus adversários do União do Forte (20/10) e do  Alenquer (20/8) e empatando com o Montijo (14/14) obtendo assim o 1º  lugar do Torneio. Pela tarde, foi a vez das Sub 14 femininas defrontarem  o Alenquer (50/54) e o Santarém Basket (12/110).
+                    Em simultâneo entraram em campo os Sub 14 masculinos, jogando com o  Física de Torres Vedras (41/81) e a equipa local do Alenquer (33/100).
+                </p>
+            </div> 
+        </div>
+    
+        <div class = "container">
+            <div class = "image-frame">
+                <h2>
+                BASQUETEBOL PINHALNOVENSE – VITÓRIAS NO FEMININO
+                </h2>
+                <img class="news-image" src="Noticia 2.png" alt="News 2 Image">
+                <p>
+                    No  âmbito do Torneio da Pascoa 2022, Basquetebol Feminino, Torneio  Triangular (na foto), sob organização da ABS, no Pavilhão Municipal de  Pinhal Novo, a partir das 09:00 de sábado, dia 9, as  Sub 16 femininas disputaram o troféu com as suas congéneres do Fabril,  do Barreiro, vencendo por 22-16, e do União do Forte, de Forte da Casa,  perdendo por 18-30. 
+                </p>
+                <img class="news-image" src="Noticia 2(2).png" alt="News 2 Image">
+                <p>
+                    Domingo, dia 10, no mesmo local e hora, foi vez das  Sub 14 femininas igualmente disputarem o  troféu, com as suas congéneres do Scalipus, vencendo por 20-9, e do  Alenquer, num extraordinário jogo de basquetebol, renhido e muito  equilibrado, onde a vitória sorriu ás ribatejanas por 18-22, vencedoras  do Torneio. 
+                </p>
+                <br>
+                <p>
+                    Neste  escalão, a nossa atleta Madalena Ferreira continua a participar na  Seleção Distrital, que vai disputar o Torneio Interassociações, a  realizar na Albufeira.
+                    Agora as merecidas férias da Quadra, ainda que os trabalhos de treino se mantenham.
+                    Continuam  abertas as inscrições, em todos os escalões e géneros, para  participação nos torneios oficiais da Associação de Basquetebol de  Setubal.
+                    Aproveitamos  a oportunidade para desejar uma Páscoa Feliz e Segura a todos os  colaboradores e leitores desse órgão de comunicação social, e a todos os  munícipes.
+                </p>
+                <img class="news-image" src="Noticia 2(3).png" alt="News 2 Image">
+            </div>
+        </div>     
+        <br>
+        <br>
+    </body>
+    </html>

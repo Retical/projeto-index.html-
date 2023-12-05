@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ginástica | CDP Basquetebol</title>
+    <link rel="PN Icon" type="image/jpg" href="Clube_Desportivo_Pinhalnovense.ico"/>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .imagem-background {
+            background-image: url('https://www.cm-palmela.pt/cmpalmela/uploads/news/image/5923/festa_ginastica.jpg');
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; /* Alterado de 100% para cover */
+            position: fixed;
+            width: 100%;
+            z-index: -1; /* Coloca a imagem de fundo atrás de todo o conteúdo */
+        }
+        
+
+        .topnav {
+            background-color: #4180bb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        .topnav a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 20px 15px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 60px; /* Adjust the top position based on the height of the navbar */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 14px 16px; /* Same size as the main menu */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .back-button {
+            background-color: #4180bb;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 8px;
+            margin: 50px 15px; /* Adjusted margin to move the button further down */
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .back-button:hover {
+            background-color: #306193;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #4180bb;
+            border-radius: 10px;
+        }
+
+        .frame {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .frame img {
+            max-width: 10%; /* Set the max-width to 50% to center align */
+            display: block;
+            margin: 0 auto; /* Use margin auto to center align */
+            border: 1px solid #ddd;
+            border-radius: 50%; /* Make the image circular */
+            margin-top: 10px;
+        }
+
+        h1 {
+            color:#4180bb;
+            text-align:center;
+        }
+
+        .info-section {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .info-section p {
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        h4 {
+            text-align:center;
+        }
+
+        h5 {
+            text-align:center;
+        }
+
+        h2 {
+            text-align:center;
+            color:#4180bb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class = "imagem-background"></div>
+    <div class="topnav">
+        <a href="PaginaInicial.html">O clube</a>
+        <a href="Noticias.html">Noticias</a>
+        <a href="Modalidades.html">Outras Modalidades</a>
+        <div class="dropdown">
+            <a href="#">Contactos</a>
+            <div class="dropdown-content">
+                <a href="Formulario.html">Entrar em Contacto</a>
+                <a href="Contactos.html">Outras Informações</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <a class="back-button" href="javascript:history.back()"> Voltar</a>
+
+    <div class="container">
+        <h1>Ginástica</h1>
+
+        <div class="frame">
+            <br>
+            <h2>COORDENAÇÃO</h2>
+            <div class="info-section">
+                <p><strong>Professor Carlos Vilas</strong></p>
+                <p>Email: ginasticacdp@gmail.com</p>
+                <div class="frame img">
+                    <img src="Ginastica Professor.png" alt="Professor Carlos Vilas">
+                </div>
+                
+            </div>
+        </div>  
+    </div>
+    <div class = "container">
+        <div class="frame">
+            <h2>Horários - ÉPOCA 2023/2024</h2>
+            <div class="info-section">
+                <h4><strong>Ginástica Iniciação (3 aos 6 anos)</strong></h4>
+                <p>2ªf e 6ªf | 18h00 às 18h45 (sede CDP)</p>
+                <h4>
+                    Ginástica Iniciação (3 aos 6 anos)
+                </h4>
+                <p>
+                    2ªf e 6ªf | 18h00 às 18h45 (sede CDP)
+                </p>
+                <h4>
+                    Ginástica Iniciação (6 aos 9 anos)
+                </h4>
+                <p>
+                    2ªf e 6ªf | 18h45 às 19h30 (sede CDP)
+                </p>   
+                <h4>
+                    Ginástica Acrobática
+                </h4>
+                <h5>
+                    (formação/demonstração e competição)
+                </h5>   
+                <p>
+                    2ªf | 18h30 às 20h30 (Pav. Desp.Mun.Pinhal Novo)
+                </p>
+                <p>
+                    4ªf | 18h30 às 20h30 (sede) 
+                </p>
+                <p>
+                    6ªf | 18h30 às 20h30 (Pav. Desp.Mun.Pinhal Novo)
+                </p>
+                <h4>
+                    Trampolins /  Tumbling
+                </h4>
+                <h5>
+                    INICIAÇÃO
+                </h5>
+                <p>
+                    3ªf e 6ªf | 18h30 às 19h30 (Pav. Desp.Mun.Pinhal Novo)
+                </p>
+                <h5>
+                    PRÉ-COMPETIÇÃO
+                </h5>
+                <p>
+                    3ªf | 19h30 às 20h30 (Pav. Desp.Mun.Pinhal Novo)
+                </p>
+                <p>
+                    5ªf | 19h00 às 20h30 (Pav. Desp.Mun.Pinhal Novo)
+                </p>
+                <p>
+                     6ªf | 19h30 às 20h30 (Pav. Desp.Mun.Pinhal Novo)
+                </p>
+                <h4>
+                    Ginástica Rítmica
+                </h4>
+                <h5>
+                    INICIAÇÃO (2 aos 6 anos)
+                </h5>
+                <p>
+                    3ªf e 5ªf | 18h30 às 19h30 (Pav. Desp.Mun.Pinhal Novo)
+                </p>
+                <h5>
+                    FORMAÇÃO (maiores de 6 anos)
+                </h5>
+                <p>
+                    3ªf e 5ªf | 18h30 às 19h30 (Pav. Desp.Mun.Pinhal Novo)
+                </p>
+                <h5>
+                    COMPETIÇÃO
+                </h5>
+                <p>
+                    3ªf e 5ªf | 18h30 às 20h30 (Pav. Desp.Mun.Pinhal Novo)
+                </p>
+                <p>
+                    4ªf e 6ªf | 17h30 às 20h30 (Salão Bombeiros Pinhal Novo)
+                </p>              
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="frame">
+            <h2> GYMFEST 2017 - ACROBÁTICA</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q5xZECgTssc?si=mtWGBkC2HqHJlEHP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>        
+            </iframe>
+        </div>
+    </div>
+    <br>
+    <br>
+
+</body>
+</html>

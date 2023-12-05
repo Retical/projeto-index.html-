@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Pinhal Novense | Basquetebol </title>
+        <link rel="PN Icon" type="image/jpg" href="Clube_Desportivo_Pinhalnovense.ico"/>
+
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            div {
+            animation: blur 1s ease-in 0s ;
+            -webkit-animation: blur 1s ease-in 0s ;
+            -moz-animation: blur 1s ease-in 0s ;
+            }
+
+            @keyframes blur {
+            100% {
+                -webkit-filter: blur(8px);
+                -moz-filter: blur(0px);
+                -o-filter: blur(0px);
+                -ms-filter: blur(0px);
+                
+            }
+            /*
+            75% {
+                -webkit-filter: blur(15px);
+                -moz-filter: blur(15px);
+                -o-filter: blur(15px);
+                -ms-filter: blur(15px);
+            }
+            50% {
+                -webkit-filter: blur(25px);
+                -moz-filter: blur(25px);
+                -o-filter: blur(25px);
+                -ms-filter: blur(25px);
+            }
+
+            25% {
+                -webkit-filter: blur(35px);
+                -moz-filter: blur(35px);
+                -o-filter: blur(35px);
+                -ms-filter: blur(35px);
+            }
+
+            */
+
+            0% {
+                -webkit-filter: blur(50px);
+                -moz-filter: blur(50px);
+                -o-filter: blur(50px);
+                -ms-filter: blur(50px);
+            }
+
+            }
+            
+            .imagem-background {
+                background-image:url('https://static.wixstatic.com/media/e9ac5c_386381702fe34ea68a22e9728fb3429f~mv2.jpg/v1/fill/w_610,h_566,al_c,lg_1,q_80/e9ac5c_386381702fe34ea68a22e9728fb3429f~mv2.jpg');
+                
+                /* Filtro - Imagem */
+                filter:blur(8px);
+                -webkit-filter:blur(8px);
+                height: 100%;
+
+                /* Imagem centrada */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+
+            }
+
+            .texto-background {
+                background-color:rgb(0, 0, 0);
+                background-color:rgba(255, 255, 255, 0.3);
+                color: rgb(0, 68, 255);
+                font-weight: bold;
+                border: 3px solid rgb(0, 68, 255);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .buttoes {
+                border: 2px solid;
+                border-color: rgb(0, 68, 255);
+                background-color:rgb(255, 255, 255);
+                color: rgb(0, 68, 255);
+                font-weight: bold;
+                padding: 14px 28px;
+                font-size: 13px;
+                cursor: pointer;
+
+            }
+        </style>
+    </head> 
+    <body>
+        <div class = "imagem-background"></div>
+        <div class = "texto-background">
+            <h1> Pinhal Novense </h1>
+            <img src = "Clube_Desportivo_Pinhalnovense.png" alt ="Clube_Desportivo_Pinhalnovense">
+            <h2> Basquetebol </h2>
+            <a href = "Await.html"> <button class = "buttoes"> Entrar </button> </a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagina Inicial | CDP Basquetebol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="PN Icon" type="image/jpg" href="Clube_Desportivo_Pinhalnovense.ico"/>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            background-color: #4180bb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        .topnav a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 20px 15px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4180bb;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+         }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4180bb;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(69, 105, 160)
+        }
+
+        .info-frame {
+            background-color: #4180bb;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-button a {
+            background-color: #4180bb;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .form-button a:hover {
+            background-color: rgb(69, 105, 160);
+        }
+
+        .imagem-background {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9ad01coBIMnNr2tgAQZr1RK2wqA3s4g0Ew&usqp=CAU');
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; /* Alterado de 100% para cover */
+            position: fixed;
+            width: 100%;
+            z-index: -1; /* Coloca a imagem de fundo atrás de todo o conteúdo */
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('click', function () {
+                    dropdown.classList.toggle('active');
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!dropdown.contains(event.target)) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class = "imagem-background"></div>
+    <div class="topnav">
+        <div class="dropdown">
+            <a href="#">O clube</a>
+            <div class="dropdown-content">
+                <a href="Historia.html">História</a>
+                <a href="InfoCDP.html">Info CDP</a>
+                <a href="Agenda.html">Agenda</a>
+            </div>
+        </div>
+        <a href="Noticias.html">Noticias</a>
+        <a href="Modalidades.html">Outras Modalidades</a>
+        <div class="dropdown">
+            <a href="#">Contactos</a>
+            <div class="dropdown-content">
+                <a href="Formulario.html">Entrar em Contacto</a>
+                <a href="Contactos.html">Outras Informações</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+    
+    <div class="container">
+        <h1 style="color:#4180bb">Entre em Contato</h1>
+        <form id="contact-form">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="comment">Comentário:</label>
+          <textarea id="comment" name="comment" rows="4" required></textarea>
+    
+          <button type="submit">Enviar</button>
+        </form>	
+    </div>
+</body>
+</html>

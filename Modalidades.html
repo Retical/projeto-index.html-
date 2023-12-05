@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pagina Inicial | CDP Basquetebol</title>
+    <link rel="PN Icon" type="image/jpg" href="Clube_Desportivo_Pinhalnovense.ico"/>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #4180bb;
+        }
+
+        .topnav {
+            background-color: #4180bb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        .topnav a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 20px 15px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .modalities-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .modality {
+            width: 300px;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            background-color: #ffffff; /* Set the background color for the modality button */
+        }
+
+        .modality:hover {
+            transform: scale(1.05);
+        }
+
+        .modality a {
+            text-decoration: none;
+            color: inherit;
+            display: block; /* Make the entire modality button clickable */
+        }
+
+        .modality img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: blue;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdown = document.querySelector('.dropdown');
+
+            dropdown.addEventListener('click', function (event) {
+                event.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            var currentPage = window.location.href;
+            var homePage = "PaginaInicial.html";
+
+            if (currentPage.includes(homePage)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="PaginaInicial.html">O clube</a>
+        <a href="Noticias.html">Noticias</a>
+        <a href="Modalidades.html">Outras Modalidades</a>
+        <div class="dropdown">
+            <a href="#">Contactos</a>
+            <div class="dropdown-content">
+                <a href="Formulario.html">Entrar em Contacto</a>
+                <a href="Contactos.html">Outras Informações</a>
+            </div>
+        </div>
+    </div>
+    <div class="modalities-section">
+        <div class="modality">
+            <a href="kenpo.html">
+                <img src="KENPO.png" alt="KENPO">
+                <h2>KENPO</h2>
+                <p>
+                    O Kenpo é uma Arte Marcial de Defesa Pessoal que promove o Bem-Estar Físico, a Destreza Física, a Coordenação Motora, a Auto-Disciplina e a Auto-Confiança</p>
+            </a>
+        </div>
+        <div class="modality">
+            <a href="futebol.html">
+                <img src="Futebol.png" alt="futebol">
+                <h2>Futebol</h2>
+                <p>O futebol, também referido como futebol de campo, futebol de onze e, originalmente, futebol associado, é um esporte de equipe jogado entre dois times de 11 jogadores cada um e um árbitro que se ocupa da correta aplicação das normas</p>
+            </a>
+        </div>
+        <div class="modality">
+            <a href="ginastica.html">
+                <img src="Ginastica.png" alt="Ginástica">
+                <h2>Ginástica</h2>
+                <p>A ginástica, também chamada de gímnico é um conceito que engloba modalidades competitivas e não competitivas, envolvendo a prática de uma série de movimentos físicos exigentes de força, flexibilidade e coordenação motora com objetivo de aperfeiçoamento físico e mental. </p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
